@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wymiana Polsko-Duńska | Zagadka</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        
+        <div class="description-frame">
+            <h1>Złoty Wiek na Bałtyku</h1>
+            <p>
+                W XVI wieku statki handlowe kursowały nieustannie między polskim Gdańskiem a duńską Kopenhagą. 
+                Polska eksportowała ogromne ilości zboża, a cieśniny duńskie (Sund) były kluczowym punktem poboru ceł. 
+                Legenda głosi, że jeden z kupców ukrył swój najcenniejszy ładunek na trasie, a mapę podzielił na części.
+            </p>
+        </div>
+
+        <div class="scroll-down">↓</div>
+
+        <div class="puzzle-section" id="zagadka">
+            <h2>Twoje zadanie:</h2>
+            <p>
+                Odszukaj na pobliskim drzewie czerwoną wstążkę. Obok niej na korze wyryto trzy cyfry. 
+                Dodaj do nich rok Bitwy pod Kopenhagą, aby otrzymać kod dostępu.
+            </p>
+        </div>
+
+        <div class="checker-section">
+            <h3>Sprawdź odpowiedź</h3>
+            <input type="text" id="answer-input" autocomplete="off">
+            <br>
+            <button onclick="checkAnswer()">Potwierdź</button>
+
+            <div id="error-box" class="message error-msg">Niestety, to nie jest poprawna odpowiedź. Próbuj dalej!</div>
+            
+            <div id="success-box" class="message success-msg">
+                Świetnie! Kod jest poprawny.<br><br>
+                <strong>Następny krok:</strong> Udaj się na azymut 120° na odległość 50 metrów. Współrzędne finału to: N 51° 06.543 E 017° 01.123
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const correctAnswer = "1801"; 
+            const userInput = document.getElementById("answer-input").value.trim().toLowerCase();
+            const errorBox = document.getElementById("error-box");
+            const successBox = document.getElementById("success-box");
+
+            errorBox.style.display = "none";
+            successBox.style.display = "none";
+
+            if (userInput === correctAnswer) {
+                successBox.style.display = "block";
+            } else {
+                errorBox.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
