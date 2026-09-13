@@ -157,3 +157,11 @@ button:hover {
     color: #27ae60;
     border: 1px solid #27ae60;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 20px auto;
+}
