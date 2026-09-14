@@ -11,10 +11,9 @@
     <div class="wrapper">
         
         <div class="description-frame">
-            <h1>Copenhagen</h1>
+            <h1>Carl Nielsen</h1>
             <p>
-               Copenhagen is the capital and largest city of Denmark. It is located on the coast and is known for its beautiful streets, canals and colorful buildings. The city is famous for the Little Mermaid statue, which is one of its most popular attractions. Copenhagen has a long history and is also the home of the Danish royal family. Today, it is an important center of culture, business and education. The city is also known for its many bicycles and green spaces.
-            </p>
+               
         </div>
 
         <div class="scroll-down">↓</div>
@@ -22,7 +21,7 @@
         <div class="puzzle-section" id="zagadka">
             <h2>Your task:</h2>
             <p>
-                <img src="images/89171 (1).png" alt="zagadka z zdjęciem Warszawy">
+                E' - D#' - E' - D#' - E' - H - D' - C' - A (Answer in English)
             </p>
         </div>
 
@@ -44,7 +43,7 @@
 
     <script>
         function checkAnswer() {
-            const correctAnswer = "mermaid"; 
+            const correctAnswer = "for elise"; 
             const userInput = document.getElementById("answer-input").value.trim().toLowerCase();
             const errorBox = document.getElementById("error-box");
             const successBox = document.getElementById("success-box");
