@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        
+        <div class="description-frame">
+            <h1>Peter Schmeichel</h1>
+            <p>
+               Peter Schmeichel is a famous Danish former football goalkeeper. He was born in 1963 in Denmark. He became famous while playing for Manchester United and won many important trophies with the club. He was also the goalkeeper of the Danish national team. In 1992, he helped Denmark win the European Championship. He is considered one of the greatest goalkeepers in football history.
+            </p>
+        </div>
+
+        <div class="scroll-down">↓</div>
+
+        <div class="puzzle-section" id="zagadka">
+            <h2>Your task:</h2>
+            <p>
+                83 19 11 43 83 2 67 53 11 71 11 61 67 5 19 41 11 23 5 19 11 37 3 47 61 43
+            </p>
+        </div>
+
+        <div class="checker-section">
+            <h3>Check your answer</h3>
+            <input type="text" id="answer-input" autocomplete="off">
+            <br>
+            <button onclick="checkAnswer()">Submit</button>
+
+            <div id="error-box" class="message error-msg">Unfortunately, that is not the correct answer. Keep trying!</div>
+            
+            <div id="success-box" class="message success-msg">
+                Congrats!<br><br>
+                <strong>Next stage:</strong> ###
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const correctAnswer = "1963"; 
+            const userInput = document.getElementById("answer-input").value.trim().toLowerCase();
+            const errorBox = document.getElementById("error-box");
+            const successBox = document.getElementById("success-box");
+
+            errorBox.style.display = "none";
+            successBox.style.display = "none";
+
+            if (userInput === correctAnswer) {
+                successBox.style.display = "block";
+            } else {
+                errorBox.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
