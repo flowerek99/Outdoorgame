@@ -1,0 +1,65 @@
+Mikkel Hansen is a famous Danish handball player. He was born in 1987 in Denmark. He played for several clubs and was an important player for the Danish national team. He won many medals and trophies during his career. He is known for his powerful shots and excellent skills. He is considered one of the greatest handball players in Denmark.
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        
+        <div class="description-frame">
+            <h1>###</h1>
+            <p>
+               Mikkel Hansen is a famous Danish handball player. He was born in 1987 in Denmark. He played for several clubs and was an important player for the Danish national team. He won many medals and trophies during his career. He is known for his powerful shots and excellent skills. He is considered one of the greatest handball players in Denmark.
+            </p>
+        </div>
+
+        <div class="scroll-down">↓</div>
+
+        <div class="puzzle-section" id="zagadka">
+            <h2>Your task:</h2>
+            <p>
+                <div style="display:inline-block;text-align:left;width:300px;"><a style="color:#444" href="https://www.jigidi.com/solve/q3kaxl5z/licensed-image/">licensed-image<img style="display:block;border:none;margin:5px 0 0 0;" src="//thumbs.jigidi.com/embed.php?t=m_Q3KAXL5Z_35" alt="Jigsaw puzzle - licensed-image"></a></div>
+            </p>
+        </div>
+
+        <div class="checker-section">
+            <h3>Check your answer</h3>
+            <input type="text" id="answer-input" autocomplete="off">
+            <br>
+            <button onclick="checkAnswer()">Submit</button>
+
+            <div id="error-box" class="message error-msg">Unfortunately, that is not the correct answer. Keep trying!</div>
+            
+            <div id="success-box" class="message success-msg">
+                Congrats!<br><br>
+                <strong>Next stage:</strong> ###
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const correctAnswer = "1801"; 
+            const userInput = document.getElementById("answer-input").value.trim().toLowerCase();
+            const errorBox = document.getElementById("error-box");
+            const successBox = document.getElementById("success-box");
+
+            errorBox.style.display = "none";
+            successBox.style.display = "none";
+
+            if (userInput === correctAnswer) {
+                successBox.style.display = "block";
+            } else {
+                errorBox.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
