@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        
+        <div class="description-frame">
+            <h1>Wrocław</h1>
+            <p>
+               Wrocław is one of the biggest cities in Poland. It is located in western Poland, on the Oder River. The city has a long and complicated history and belonged to different countries in the past. Wrocław is famous for its beautiful Old Town, many bridges and small dwarf statues. Today, it is an important city for culture, education and business. It is also one of the most popular tourist cities in Poland.
+
+            </p>
+        </div>
+
+        <div class="scroll-down">↓</div>
+
+        <div class="puzzle-section" id="zagadka">
+            <h2>Your task:</h2>
+            <p>
+                
+            </p>
+        </div>
+
+        <div class="checker-section">
+            <h3>Check your answer</h3>
+            <input type="text" id="answer-input" autocomplete="off">
+            <br>
+            <button onclick="checkAnswer()">Submit</button>
+
+            <div id="error-box" class="message error-msg">Unfortunately, that is not the correct answer. Keep trying!</div>
+            
+            <div id="success-box" class="message success-msg">
+                Congrats!<br><br>
+                <strong>Next stage:</strong> ###
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const correctAnswer = "1801"; 
+            const userInput = document.getElementById("answer-input").value.trim().toLowerCase();
+            const errorBox = document.getElementById("error-box");
+            const successBox = document.getElementById("success-box");
+
+            errorBox.style.display = "none";
+            successBox.style.display = "none";
+
+            if (userInput === correctAnswer) {
+                successBox.style.display = "block";
+            } else {
+                errorBox.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
