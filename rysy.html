@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        
+        <div class="description-frame">
+            <h1>Rysy</h1>
+            <p>
+               Rysy is the highest mountain in Poland. The highest point is 2,499 metres above sea level and is located on the border between Poland and Slovakia. The mountain is part of the Tatra Mountains. It is a popular destination for hikers and tourists. The Polish side has a difficult mountain trail leading to the top. From the summit, visitors can see beautiful views of the surrounding mountains and lakes.
+
+            </p>
+        </div>
+
+        <div class="scroll-down">↓</div>
+
+        <div class="puzzle-section" id="zagadka">
+            <h2>Your task:</h2>
+            <p>
+                
+            </p>
+        </div>
+
+        <div class="checker-section">
+            <h3>Check your answer</h3>
+            <input type="text" id="answer-input" autocomplete="off">
+            <br>
+            <button onclick="checkAnswer()">Submit</button>
+
+            <div id="error-box" class="message error-msg">Unfortunately, that is not the correct answer. Keep trying!</div>
+            
+            <div id="success-box" class="message success-msg">
+                Congrats!<br><br>
+                <strong>Next stage:</strong> ###
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const correctAnswer = "1801"; 
+            const userInput = document.getElementById("answer-input").value.trim().toLowerCase();
+            const errorBox = document.getElementById("error-box");
+            const successBox = document.getElementById("success-box");
+
+            errorBox.style.display = "none";
+            successBox.style.display = "none";
+
+            if (userInput === correctAnswer) {
+                successBox.style.display = "block";
+            } else {
+                errorBox.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
