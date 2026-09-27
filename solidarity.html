@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        
+        <div class="description-frame">
+            <h1>Solidarity</h1>
+            <p>
+               Solidarity was a Polish trade union and social movement founded in 1980. It began at the Gdańsk Shipyard and was led by Lech Wałęsa. The movement fought for better working conditions and greater political freedom. In 1981, the communist government introduced martial law and banned Solidarity. The movement continued to operate underground and became an important part of the changes of 1989. These changes helped lead to the end of communist rule in Poland.
+
+            </p>
+        </div>
+
+        <div class="scroll-down">↓</div>
+
+        <div class="puzzle-section" id="zagadka">
+            <h2>Your task:</h2>
+            <p>
+                
+            </p>
+        </div>
+
+        <div class="checker-section">
+            <h3>Check your answer</h3>
+            <input type="text" id="answer-input" autocomplete="off">
+            <br>
+            <button onclick="checkAnswer()">Submit</button>
+
+            <div id="error-box" class="message error-msg">Unfortunately, that is not the correct answer. Keep trying!</div>
+            
+            <div id="success-box" class="message success-msg">
+                Congrats!<br><br>
+                <strong>Next stage:</strong> ###
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const correctAnswer = "1801"; 
+            const userInput = document.getElementById("answer-input").value.trim().toLowerCase();
+            const errorBox = document.getElementById("error-box");
+            const successBox = document.getElementById("success-box");
+
+            errorBox.style.display = "none";
+            successBox.style.display = "none";
+
+            if (userInput === correctAnswer) {
+                successBox.style.display = "block";
+            } else {
+                errorBox.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
