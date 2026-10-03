@@ -228,3 +228,13 @@ button:hover {
     box-sizing: border-box;
     object-fit: contain;
 }
+
+@font-face {
+  font-family: 'BrailleCustom';
+  src: url('braille.woff2') format('woff2'),
+       url('braille.ttf') format('truetype');
+}
+
+.braille-text {
+  font-family: 'BrailleCustom', sans-serif;
+}
